@@ -1,0 +1,22 @@
+2c2,3
+< Combien d'allumettes ? Xavier prend 2 allumettes.
+---
+> Xavier, combien d'allumettes ? Xavier prend 2 allumettes.
+> 
+6,8c8,14
+< Combien d'allumettes ? Vous devez donner un entier.
+< Combien d'allumettes ? Nombre invalide : 5
+< Combien d'allumettes ? Xavier prend 3 allumettes.
+---
+> Xavier, combien d'allumettes ? Vous devez donner un entier.
+> Xavier, combien d'allumettes ? Xavier prend 5 allumettes.
+> Impossible ! Nombre invalide : 5 (> 3)
+> 
+> Allumettes restantes : 8
+> Xavier, combien d'allumettes ? Xavier prend 3 allumettes.
+> 
+12c19,20
+< Combien d'allumettes ? Xavier prend 1 allumette.
+---
+> Xavier, combien d'allumettes ? Xavier prend 1 allumette.
+> 

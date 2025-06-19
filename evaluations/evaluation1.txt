@@ -1,0 +1,80 @@
+Date de l'évaluation : jeu. 19 juin 2025 20:28:44 CEST
+
+Attention, il est interdit de changer ConfigurationException.java	(voir evaluation1/ConfigurationException.java.diff)
+Attention, il est interdit de changer CoupInvalideException.java	(voir evaluation1/CoupInvalideException.java.diff)
+Attention, il est interdit de changer Jeu.java	(voir evaluation1/Jeu.java.diff)
+
+Nombre de similitudes : 6	(voir evaluation1/sim_java.txt)
+Les similitudes indiquent généralement du code à restructurer.
+
+Erreurs checkstyle (différentes/types) : 23/6	(voir evaluation1//checkstyle.txt)
+
+Classe OperationInterditeException : OperationInterditeException (ok)
+
+Procuration sur le jeu réel : allumettes/JeuProxy.java (ok)
+
+OperationInterditeException, levée dans : allumettes/JeuProxy.java (ok)
+OperationInterditeException, récupérée dans : allumettes/Arbitre.java (ok)
+
+Throwable, Exception et RuntimeException ne devraient pas être récupérées car trop générales... ERREUR
+  | allumettes/InterfaceSwing.java:136:                } catch (Exception e) {
+
+AssertionError ne doit pas être récupérée... ok
+
+Autres exceptions récupérées :
+  | allumettes/Arbitre.java:59:         } catch (CoupInvalideException e) {
+  | allumettes/StrategieHumain.java:22:            } catch (NumberFormatException e) {
+  | allumettes/Jouer.java:51:       } catch (ConfigurationException e) {
+  | allumettes/InterfaceSwing.java:141:        } catch (CoupInvalideException e) {
+
+Utilisation de 'Scanner' : ok
+  | allumettes/StrategieHumain.java:6:    private static final Scanner scanner = new Scanner(System.in);
+
+Utilisation de 'split' : ok mais un seul split devrait suffir !  Code à restructurer...
+  | allumettes/Jouer.java:35:           String[] joueur1Info = args[debutArgs].split("@");
+  | allumettes/Jouer.java:36:           String[] joueur2Info = args[debutArgs + 1].split("@");
+
+Utilisation de 'Random' : ok
+  | allumettes/StrategieNaif.java:3:import java.util.Random;
+  | allumettes/StrategieNaif.java:6:    private Random random = new Random();
+
+Utilisation de '3' : Ne pas utiliser de constante littérale hors -1, 0 ou 1 (peut-être PRISE_MAX ?)
+  |     allumettes/InterfaceSwing.java:60:        boutons = new JButton[3];
+  |     allumettes/InterfaceSwing.java:61:        for (int i = 0; i < 3; i++) {
+
+Affichage de 'Impossible !' : ok
+
+Utilisation de 'System.exit' : ok
+
+Compilation de Jouer.java : OK.
+Compilation de Arbitre.java : OK.
+Compilation de StrategieHumainSwing.java : OK.
+Compilation de StartegieSuperTricheur.java : OK.
+Compilation de InterfaceSwing.java : OK.
+Test exemplePresqueSujet : NON CONFORME	(voir evaluation1/exemplePresqueSujet.diff)
+Test exempleTricheurSujet : NON CONFORME	(voir evaluation1/exempleTricheurSujet.diff)
+Test exempleConfiantTricheurSujet : NON CONFORME	(voir evaluation1/exempleConfiantTricheurSujet.diff)
+Test exempleRobustesse : NON CONFORME	(voir evaluation1/exempleRobustesse.diff)
+Test exempleHumainTricheurExpert : NON CONFORME	(voir evaluation1/exempleHumainTricheurExpert.diff)
+Test exempleMaxLou : NON CONFORME	(voir evaluation1/exempleMaxLou.diff)
+Test exempleRapideRapide : ok
+Test exempleTricheurExpert : NON CONFORME	(voir evaluation1/exempleTricheurExpert.diff)
+
+Test RobustesseTest : OK (25 tests)	(voir evaluation1/RobustesseTest.txt)
+
+Vérification du respect du diagramme de classe...
+Test FormeC7Test : Tests run: 1,  Failures: 1	(voir evaluation1/FormeC7Test.txt)
+    1) testerRespectArchitecture(FormeC7Test)
+        Méthode manquante dans la classe allumettes.Arbitre : arbitrer(allumettes.Jeu)
+
+Test FormeC9Test : OK (1 test)	(voir evaluation1/FormeC9Test.txt)
+Test FormeC14Test : OK (1 test)	(voir evaluation1/FormeC14Test.txt)
+Test FormeExceptionsTest : OK (1 test)	(voir evaluation1/FormeExceptionsTest.txt)
+Test FormeProxyTest : Tests run: 2,  Failures: 2	(voir evaluation1/FormeProxyTest.txt)
+    1) testerProcuration(FormeProxyTest)
+        allumettes.JeuProxy.retirer : Est-il logique qu'elle dise pouvoir propager CoupInvalideException ?
+    2) testerProcurationFonctionnement(FormeProxyTest)
+        allumettes.JeuProxy.retirer : Pas l'exception attendue, NullPointerException au lieu de OperationInterditeException.
+
+
+Aucune classe de test (fichier *Test.java ou Test*.java) !

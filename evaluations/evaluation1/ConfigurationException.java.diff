@@ -1,0 +1,13 @@
+4,5c4,5
+<  * @author	Xavier CrÃ©gut
+<  * @version	1.4
+---
+>  * @author Meriem El Air
+>  * @version 1
+9c9,12
+< 	/** Initaliser une ConfigurationException avec le message prÃ©cisÃ©.
+---
+> 	/** Numéro de version pour la sérialisation. */
+> 	private static final long serialVersionUID = 1L;
+> 
+> 	/** Initialiser une ConfigurationException avec le message précisé.

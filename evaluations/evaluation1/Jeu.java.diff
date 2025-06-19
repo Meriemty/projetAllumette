@@ -1,0 +1,28 @@
+5c5
+< 	/** Nombre maximal d'allumettes pouvant Ãªtre prises. */
+---
+> 	/** Nombre maximal d'allumettes pouvant être prises. */
+9c9
+< 	 * @return nombre d'allumettes encore en jeu
+---
+> 	 * @return le nombre d'allumettes encore en jeu
+13,17c13,16
+< 	/** Retirer des allumettes.  Le nombre d'allumettes doit Ãªtre compris
+< 	 * entre 1 et PRISE_MAX, dans la limite du nombre d'allumettes encore
+< 	 * en jeu.
+< 	 * @param nbPrises nombre d'allumettes prises.
+< 	 * @throws CoupInvalideException tentative de prendre un nombre invalide d'allumettes
+---
+> 	/** Retirer des allumettes. Le nombre d'allumettes doit être compris entre 1 et PRISE_MAX,
+> 	 * dans la limite du nombre d'allumettes encore en jeu.
+> 	 * @param prise le nombre d'allumettes prises
+> 	 * @throws CoupInvalideException si le nombre d'allumettes est invalide
+19c18,23
+< 	void retirer(int nbPrises) throws CoupInvalideException;
+---
+> 	void retirer(int prise) throws CoupInvalideException;
+> 
+> 	/** Obtenir une représentation textuelle du jeu.
+> 	 * @return une représentation textuelle du jeu
+> 	 */
+> 	String toString();
