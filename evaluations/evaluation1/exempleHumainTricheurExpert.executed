@@ -13,7 +13,7 @@ Allumettes restantes : 4
 Ordinateur prend 1 allumette.
 Allumettes restantes : 3
 Combien d'allumettes ? Exception in thread "main" java.util.NoSuchElementException: No line found
-	at java.base/java.util.Scanner.nextLine(Scanner.java:1651)
+	at java.base/java.util.Scanner.nextLine(Scanner.java:1660)
 	at allumettes.StrategieHumain.getPrise(StrategieHumain.java:15)
 	at allumettes.Joueur.getPrise(Joueur.java:31)
 	at allumettes.Arbitre.arbitrer(Arbitre.java:39)
