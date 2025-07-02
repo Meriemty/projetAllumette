@@ -6,7 +6,7 @@ Suppositions faites :
  - jeuReel     = class allumettes.JeuAllumettes
 
 
-Time: 0,033
+Time: 0,017
 There were 2 failures:
 1) testerProcuration(FormeProxyTest)
 java.lang.AssertionError: allumettes.JeuProxy.retirer : Est-il logique qu'elle dise pouvoir propager CoupInvalideException ?
