@@ -53,12 +53,26 @@ Strategies disponibles : humain, naif, rapide, expert, tricheur
 ================================================================================
 > java allumettes.Jouer.main("@humain", "ordi@rapide")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.ExceptionInInitializerError
+Allumettes restantes : 13
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 12
+ordi prend 3 allumettes.
+Allumettes restantes : 9
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 8
+ordi prend 3 allumettes.
+Allumettes restantes : 5
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 4
+ordi prend 3 allumettes.
+Allumettes restantes : 1
+Combien d'allumettes ?  prend 1 allumette.
+ perd !
+ordi gagne !
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main("xxx@xyz", "yyy@rapide")
 --------------------------------------------------------------------------------
@@ -78,7 +92,7 @@ Strategies disponibles : humain, naif, rapide, expert, tricheur
 --------------------------------------------------------------------------------
 
 
-.E.
+..
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "yyy@rapide", "xxx@ville@naif")
 --------------------------------------------------------------------------------
@@ -102,12 +116,26 @@ Strategies disponibles : humain, naif, rapide, expert, tricheur
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "@humain", "ordi@rapide")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NoClassDefFoundError: Could not initialize class allumettes.StrategieHumain
+Allumettes restantes : 13
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 12
+ordi prend 3 allumettes.
+Allumettes restantes : 9
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 8
+ordi prend 3 allumettes.
+Allumettes restantes : 5
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 4
+ordi prend 3 allumettes.
+Allumettes restantes : 1
+Combien d'allumettes ?  prend 1 allumette.
+ perd !
+ordi gagne !
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main("xxx@rapide@naif", "yyy@rapide")
 --------------------------------------------------------------------------------
@@ -201,12 +229,26 @@ Strategies disponibles : humain, naif, rapide, expert, tricheur
 ================================================================================
 > java allumettes.Jouer.main("-confiant", "ordi@rapide", "@humain")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NoClassDefFoundError: Could not initialize class allumettes.StrategieHumain
+Allumettes restantes : 13
+ordi prend 3 allumettes.
+Allumettes restantes : 10
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 9
+ordi prend 3 allumettes.
+Allumettes restantes : 6
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 5
+ordi prend 3 allumettes.
+Allumettes restantes : 2
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 1
+ordi prend 1 allumette.
+ordi perd !
+ gagne !
 --------------------------------------------------------------------------------
 
 
-E.
+.
 ================================================================================
 > java allumettes.Jouer.main("yyy@rapide", "xxx@rapide@naif")
 --------------------------------------------------------------------------------
@@ -230,10 +272,28 @@ Strategies disponibles : humain, naif, rapide, expert, tricheur
 ================================================================================
 > java allumettes.Jouer.main("ordi@rapide", "@humain")
 --------------------------------------------------------------------------------
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-*** Exception non récupérée : java.lang.NoClassDefFoundError: Could not initialize class allumettes.StrategieHumain
+Allumettes restantes : 13
+ordi prend 3 allumettes.
+Allumettes restantes : 10
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 9
+ordi prend 3 allumettes.
+Allumettes restantes : 6
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 5
+ordi prend 3 allumettes.
+Allumettes restantes : 2
+Combien d'allumettes ?  prend 1 allumette.
+Allumettes restantes : 1
+ordi prend 1 allumette.
+ordi perd !
+ gagne !
 --------------------------------------------------------------------------------
 
 
-E
+
+
+Time: 0,102
+
+OK (25 tests)
 

@@ -1,4 +1,4 @@
-Date de l'évaluation : mer. 02 juil. 2025 07:22:22 CEST
+Date de l'évaluation : ven. 04 juil. 2025 22:41:58 CEST
 
 Attention, il est interdit de changer ConfigurationException.java	(voir evaluation1/ConfigurationException.java.diff)
 Attention, il est interdit de changer CoupInvalideException.java	(voir evaluation1/CoupInvalideException.java.diff)
@@ -23,9 +23,9 @@ AssertionError ne doit pas être récupérée... ok
 
 Autres exceptions récupérées :
   | allumettes/Arbitre.java:59:         } catch (CoupInvalideException e) {
-  | allumettes/StrategieHumain.java:22:            } catch (NumberFormatException e) {
   | allumettes/Jouer.java:51:       } catch (ConfigurationException e) {
   | allumettes/InterfaceSwing.java:141:        } catch (CoupInvalideException e) {
+  | allumettes/StrategieHumain.java:22:            } catch (NumberFormatException e) {
 
 Utilisation de 'Scanner' : ok
   | allumettes/StrategieHumain.java:6:    private static final Scanner scanner = new Scanner(System.in);
@@ -48,9 +48,9 @@ Utilisation de 'System.exit' : ok
 
 Compilation de Jouer.java : OK.
 Compilation de Arbitre.java : OK.
-Compilation de StrategieHumainSwing.java : OK.
-Compilation de StartegieSuperTricheur.java : OK.
 Compilation de InterfaceSwing.java : OK.
+Compilation de StartegieSuperTricheur.java : OK.
+Compilation de StrategieHumainSwing.java : OK.
 Test exemplePresqueSujet : NON CONFORME	(voir evaluation1/exemplePresqueSujet.diff)
 Test exempleTricheurSujet : NON CONFORME	(voir evaluation1/exempleTricheurSujet.diff)
 Test exempleConfiantTricheurSujet : NON CONFORME	(voir evaluation1/exempleConfiantTricheurSujet.diff)
@@ -60,58 +60,17 @@ Test exempleMaxLou : NON CONFORME	(voir evaluation1/exempleMaxLou.diff)
 Test exempleRapideRapide : ok
 Test exempleTricheurExpert : NON CONFORME	(voir evaluation1/exempleTricheurExpert.diff)
 
-Test RobustesseTest : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-WARNING: A terminally deprecated method in java.lang.System has been called
-WARNING: System::setSecurityManager has been called by RobustesseTest (file:/home/cregut/hpxc/cregut.svn.enseeiht.fr/2024/1sn/tob/admin/pc/evaluation1/tests.jar)
-WARNING: Please consider reporting this to the maintainers of RobustesseTest
-WARNING: System::setSecurityManager will be removed in a future release
-Exception in thread "main" java.lang.ExceptionInInitializerError
-	at java.base/java.text.NumberFormat.getInstance(NumberFormat.java:961)
-	at java.base/java.text.NumberFormat.getInstance(NumberFormat.java:478)
-	at org.junit.internal.TextListener.elapsedTimeAsString(TextListener.java:99)
-	at org.junit.internal.TextListener.printHeader(TextListener.java:56)
-	at org.junit.internal.TextListener.testRunFinished(TextListener.java:26)
-	at org.junit.runner.notification.SynchronizedRunListener.testRunFinished(SynchronizedRunListener.java:42)
-	at org.junit.runner.notification.RunNotifier$2.notifyListener(RunNotifier.java:103)
-	at org.junit.runner.notification.RunNotifier$SafeNotifier.run(RunNotifier.java:72)
-	at org.junit.runner.notification.RunNotifier.fireTestRunFinished(RunNotifier.java:100)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.junit.runner.JUnitCore.runMain(JUnitCore.java:77)
-	at org.junit.runner.JUnitCore.main(JUnitCore.java:36)
-Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Set.contains(Object)" because the return value of "java.util.Map.get(Object)" is null
-	at RobustesseTest$NoExitSecurityManager.checkPermission(RobustesseTest.java:302)
-	at java.base/java.lang.SecurityManager.checkPropertyAccess(SecurityManager.java:1155)
-	at java.base/java.lang.System.getProperty(System.java:931)
-	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:87)
-	at java.base/sun.security.action.GetPropertyAction.run(GetPropertyAction.java:53)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:318)
-	at java.base/sun.security.action.GetPropertyAction.privilegedGetProperty(GetPropertyAction.java:108)
-	at java.base/sun.util.locale.provider.LocaleProviderAdapter.<clinit>(LocaleProviderAdapter.java:124)
-	... 13 more
-Le test ne se termine pas !	(voir evaluation1/RobustesseTest.txt)
-
+Test RobustesseTest : OK (25 tests)	(voir evaluation1/RobustesseTest.txt)
 
 Vérification du respect du diagramme de classe...
-Test FormeC7Test : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-Tests run: 1,  Failures: 1	(voir evaluation1/FormeC7Test.txt)
+Test FormeC7Test : Tests run: 1,  Failures: 1	(voir evaluation1/FormeC7Test.txt)
     1) testerRespectArchitecture(FormeC7Test)
         Méthode manquante dans la classe allumettes.Arbitre : arbitrer(allumettes.Jeu)
 
-Test FormeC9Test : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-OK (1 test)	(voir evaluation1/FormeC9Test.txt)
-Test FormeC14Test : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-OK (1 test)	(voir evaluation1/FormeC14Test.txt)
-Test FormeExceptionsTest : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-OK (1 test)	(voir evaluation1/FormeExceptionsTest.txt)
-Test FormeProxyTest : WARNING: A command line option has enabled the Security Manager
-WARNING: The Security Manager is deprecated and will be removed in a future release
-Tests run: 2,  Failures: 2	(voir evaluation1/FormeProxyTest.txt)
+Test FormeC9Test : OK (1 test)	(voir evaluation1/FormeC9Test.txt)
+Test FormeC14Test : OK (1 test)	(voir evaluation1/FormeC14Test.txt)
+Test FormeExceptionsTest : OK (1 test)	(voir evaluation1/FormeExceptionsTest.txt)
+Test FormeProxyTest : Tests run: 2,  Failures: 2	(voir evaluation1/FormeProxyTest.txt)
     1) testerProcuration(FormeProxyTest)
         allumettes.JeuProxy.retirer : Est-il logique qu'elle dise pouvoir propager CoupInvalideException ?
     2) testerProcurationFonctionnement(FormeProxyTest)

@@ -1,21 +1,21 @@
-File allumettes/Arbitre.java: 268 tokens, 69 lines
-File allumettes/CoupInvalideException.java: 75 tokens, 42 lines
-File allumettes/Joueur.java: 74 tokens, 40 lines
-File allumettes/StrategieHumainSwing.java: 79 tokens, 27 lines (not NL-terminated)
-File allumettes/OperationInterditeException.java: 28 tokens, 17 lines (not NL-terminated)
-File allumettes/StrategieHumain.java: 130 tokens, 27 lines
-File allumettes/StrategieRapide.java: 39 tokens, 10 lines
-File allumettes/ConfigurationException.java: 28 tokens, 19 lines
-File allumettes/JeuProxy.java: 99 tokens, 34 lines
-File allumettes/Jouer.java: 313 tokens, 81 lines
-File allumettes/Jeu.java: 27 tokens, 25 lines
-File allumettes/JeuAllumettes.java: 144 tokens, 41 lines (not NL-terminated)
-File allumettes/StartegieSuperTricheur.java: 7 tokens, 5 lines
-File allumettes/StrategieExpert.java: 56 tokens, 17 lines
-File allumettes/InterfaceSwing.java: 941 tokens, 200 lines (not NL-terminated)
 File allumettes/StrategieNaif.java: 58 tokens, 14 lines (not NL-terminated)
-File allumettes/Strategie.java: 13 tokens, 11 lines
+File allumettes/StrategieRapide.java: 39 tokens, 10 lines
+File allumettes/Arbitre.java: 268 tokens, 69 lines
 File allumettes/StrategieTricheur.java: 62 tokens, 23 lines
+File allumettes/Jouer.java: 313 tokens, 81 lines
+File allumettes/InterfaceSwing.java: 941 tokens, 200 lines (not NL-terminated)
+File allumettes/CoupInvalideException.java: 75 tokens, 42 lines
+File allumettes/JeuProxy.java: 99 tokens, 34 lines
+File allumettes/StrategieHumain.java: 130 tokens, 27 lines
+File allumettes/Jeu.java: 27 tokens, 25 lines
+File allumettes/ConfigurationException.java: 28 tokens, 19 lines
+File allumettes/StrategieExpert.java: 56 tokens, 17 lines
+File allumettes/Joueur.java: 74 tokens, 40 lines
+File allumettes/Strategie.java: 13 tokens, 11 lines
+File allumettes/StartegieSuperTricheur.java: 7 tokens, 5 lines
+File allumettes/OperationInterditeException.java: 28 tokens, 17 lines (not NL-terminated)
+File allumettes/JeuAllumettes.java: 144 tokens, 41 lines (not NL-terminated)
+File allumettes/StrategieHumainSwing.java: 79 tokens, 27 lines (not NL-terminated)
 Total input: 18 files (18 new, 0 old), 2441 tokens
 
 allumettes/InterfaceSwing.java: line 110-115 [41]
@@ -34,78 +34,91 @@ allumettes/InterfaceSwing.java: line 125-130
 >                     if (jeu.getNombreAllumettes() == 0) {
 >                         finDePartie("Ordinateur perd !");
 
-allumettes/Joueur.java: line 3-17 [29]
-allumettes/JeuProxy.java: line 3-17
-< public class Joueur {
-< 	/** Le nom du joueur. */
-< 	private String nom;
-< 	
-< 	/** La stratégie du joueur. */
-< 	private Strategie strategie;
-< 	
-< 	/** Constructeur d'un joueur.
-< 	 * @param nom le nom du joueur
-< 	 * @param strategie la stratégie du joueur
-< 	 */
-< 	public Joueur(String nom, Strategie strategie) {
-< 		this.nom = nom;
-< 		this.strategie = strategie;
-< 	}
+allumettes/JeuProxy.java: line 3-17 [29]
+allumettes/Joueur.java: line 3-17
+< public class JeuProxy implements Jeu {
+<     /** Le jeu réel. */
+<     private Jeu jeu;
+<     
+<     /** Le joueur qui utilise ce proxy. */
+<     private Joueur joueur;
+<     
+<     /** Constructeur du proxy.
+<      * @param jeu le jeu réel
+<      * @param joueur le joueur qui utilise ce proxy
+<      */
+<     public JeuProxy(Jeu jeu, Joueur joueur) {
+<         this.jeu = jeu;
+<         this.joueur = joueur;
+<     }
 ---
-> public class JeuProxy implements Jeu {
->     /** Le jeu réel. */
->     private Jeu jeu;
->     
->     /** Le joueur qui utilise ce proxy. */
->     private Joueur joueur;
->     
->     /** Constructeur du proxy.
->      * @param jeu le jeu réel
->      * @param joueur le joueur qui utilise ce proxy
->      */
->     public JeuProxy(Jeu jeu, Joueur joueur) {
->         this.jeu = jeu;
->         this.joueur = joueur;
->     }
+> public class Joueur {
+> 	/** Le nom du joueur. */
+> 	private String nom;
+> 	
+> 	/** La stratégie du joueur. */
+> 	private Strategie strategie;
+> 	
+> 	/** Constructeur d'un joueur.
+> 	 * @param nom le nom du joueur
+> 	 * @param strategie la stratégie du joueur
+> 	 */
+> 	public Joueur(String nom, Strategie strategie) {
+> 		this.nom = nom;
+> 		this.strategie = strategie;
+> 	}
 
-allumettes/OperationInterditeException.java: line 1-16 [28]
-allumettes/ConfigurationException.java: line 1-19
+allumettes/ConfigurationException.java: line 1-19 [28]
+allumettes/OperationInterditeException.java: line 1-16
 < package allumettes;
 < 
-< /** Exception levée quand une opération est interdite.
+< /** Exception qui indique que la configuration d'une partie est incorrecte.
 <  * @author Meriem El Air
 <  * @version 1
 <  */
-< public class OperationInterditeException extends RuntimeException {
-<     /** Numéro de version pour la sérialisation. */
-<     private static final long serialVersionUID = 1L;
-<     
-<     /** Constructeur de l'exception.
-<      * @param message le message d'erreur
-<      */
-<     public OperationInterditeException(String message) {
-<         super(message);
-<     }
+< public class ConfigurationException extends RuntimeException {
+< 
+< 	/** Numéro de version pour la sérialisation. */
+< 	private static final long serialVersionUID = 1L;
+< 
+< 	/** Initialiser une ConfigurationException avec le message précisé.
+< 	 * @param message le message explicatif
+< 	 */
+< 	public ConfigurationException(String message) {
+< 		super(message);
+< 	}
+< 
+< }
 ---
 > package allumettes;
 > 
-> /** Exception qui indique que la configuration d'une partie est incorrecte.
+> /** Exception levée quand une opération est interdite.
 >  * @author Meriem El Air
 >  * @version 1
 >  */
-> public class ConfigurationException extends RuntimeException {
-> 
-> 	/** Numéro de version pour la sérialisation. */
-> 	private static final long serialVersionUID = 1L;
-> 
-> 	/** Initialiser une ConfigurationException avec le message précisé.
-> 	 * @param message le message explicatif
-> 	 */
-> 	public ConfigurationException(String message) {
-> 		super(message);
-> 	}
-> 
-> }
+> public class OperationInterditeException extends RuntimeException {
+>     /** Numéro de version pour la sérialisation. */
+>     private static final long serialVersionUID = 1L;
+>     
+>     /** Constructeur de l'exception.
+>      * @param message le message d'erreur
+>      */
+>     public OperationInterditeException(String message) {
+>         super(message);
+>     }
+
+allumettes/InterfaceSwing.java: line 32-36 [26]
+allumettes/InterfaceSwing.java: line 185-188
+<         this.jeu = new JeuAllumettes(13);
+<         
+<         // Sélection de la stratégie de l'ordinateur
+<         Strategie strategieOrdi = choisirStrategie();
+<         this.joueurOrdinateur = new Joueur("Ordinateur", strategieOrdi);
+---
+>         this.jeu = new JeuAllumettes(13);
+>         // Permettre de changer la stratégie de l'ordinateur
+>         Strategie strategieOrdi = choisirStrategie();
+>         this.joueurOrdinateur = new Joueur("Ordinateur", strategieOrdi);
 
 allumettes/StrategieRapide.java: line 1-7 [26]
 allumettes/StrategieExpert.java: line 1-7
@@ -125,21 +138,8 @@ allumettes/StrategieExpert.java: line 1-7
 >     public int getPrise(Jeu jeu) {
 >         int nbAllumettes = jeu.getNombreAllumettes();
 
-allumettes/InterfaceSwing.java: line 32-36 [26]
-allumettes/InterfaceSwing.java: line 185-188
-<         this.jeu = new JeuAllumettes(13);
-<         
-<         // Sélection de la stratégie de l'ordinateur
-<         Strategie strategieOrdi = choisirStrategie();
-<         this.joueurOrdinateur = new Joueur("Ordinateur", strategieOrdi);
----
->         this.jeu = new JeuAllumettes(13);
->         // Permettre de changer la stratégie de l'ordinateur
->         Strategie strategieOrdi = choisirStrategie();
->         this.joueurOrdinateur = new Joueur("Ordinateur", strategieOrdi);
-
 allumettes/Arbitre.java: line 8-19 [25]
-allumettes/Joueur.java: line 5-16
+allumettes/JeuProxy.java: line 5-16
 < 	private Joueur j2;
 < 	
 < 	/** Le jeu en cours. */
@@ -153,16 +153,16 @@ allumettes/Joueur.java: line 5-16
 < 		this.j1 = j1;
 < 		this.j2 = j2;
 ---
-> 	private String nom;
-> 	
-> 	/** La stratégie du joueur. */
-> 	private Strategie strategie;
-> 	
-> 	/** Constructeur d'un joueur.
-> 	 * @param nom le nom du joueur
-> 	 * @param strategie la stratégie du joueur
-> 	 */
-> 	public Joueur(String nom, Strategie strategie) {
-> 		this.nom = nom;
-> 		this.strategie = strategie;
+>     private Jeu jeu;
+>     
+>     /** Le joueur qui utilise ce proxy. */
+>     private Joueur joueur;
+>     
+>     /** Constructeur du proxy.
+>      * @param jeu le jeu réel
+>      * @param joueur le joueur qui utilise ce proxy
+>      */
+>     public JeuProxy(Jeu jeu, Joueur joueur) {
+>         this.jeu = jeu;
+>         this.joueur = joueur;
 
