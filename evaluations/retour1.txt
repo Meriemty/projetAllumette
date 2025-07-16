@@ -1,0 +1,9 @@
+* Arbitre
+  - j1, j2 : trop courts
+  - while (true) : à éviter
+  - OperationInterditeException : récupérée trop tôt
+* Swing : OK mais pas intégré comme prévu.
+* Proxy : pourquoi avoir le joueur ?
+* Jouer : Des redondances qui pourraient être évitées.
+* StrategieTricheur : ne fonctionne pas...
+
